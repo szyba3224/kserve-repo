@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" version="4.4.1">
+    <Header copyright="Copyright (c) 2021 Software AG" description="Default description">
+        <Application name="Nyoka" version="5.4.0"/>
+        <Timestamp>2023-03-09 09:58:22.120887</Timestamp>
+    </Header>
+    <DataDictionary numberOfFields="2">
+        <DataField name="carat" optype="continuous" dataType="double"/>
+        <DataField name="price" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <RegressionModel modelName="LinearRegression" functionName="regression">
+        <MiningSchema>
+            <MiningField name="carat" usageType="active" optype="continuous"/>
+            <MiningField name="price" usageType="target" optype="continuous"/>
+        </MiningSchema>
+        <Output>
+            <OutputField name="predicted_price" optype="continuous" dataType="double" feature="predictedValue"/>
+        </Output>
+        <RegressionTable intercept="-2256.3605800454029122">
+            <NumericPredictor name="carat" exponent="1" coefficient="7756.4256179684352901"/>
+        </RegressionTable>
+    </RegressionModel>
+</PMML>
